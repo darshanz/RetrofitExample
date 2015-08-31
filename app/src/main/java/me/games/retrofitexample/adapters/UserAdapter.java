@@ -40,7 +40,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.CategoryViewHo
 
         User user = mUserList.get(i);
 
-
         categoryViewHolder.firstName.setText(user.getFirstName());
         categoryViewHolder.lastName.setText(user.getLastName());
         categoryViewHolder.address.setText(user.getAddress());

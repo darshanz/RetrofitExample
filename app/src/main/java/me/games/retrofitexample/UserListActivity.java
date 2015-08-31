@@ -40,19 +40,7 @@ public class UserListActivity extends AppCompatActivity {
         userRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-        apiService.getUserList(new Callback<ArrayList<User>>() {
-                                   @Override
-                                   public void success(ArrayList<User> users, Response response) {
-                                       userRecyclerView.setAdapter(new UserAdapter(users));
 
-                                   }
-
-                                   @Override
-                                   public void failure(RetrofitError error) {
-                                       Snackbar.make(userRecyclerView, "Request Failed", Snackbar.LENGTH_SHORT).show();
-
-                                   }
-                               });
 
 
 

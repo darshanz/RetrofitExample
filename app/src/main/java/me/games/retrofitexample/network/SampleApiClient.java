@@ -12,9 +12,12 @@ public class SampleApiClient {
     private  ApiService service;
 
     public static ApiService getApi(){
-        RestAdapter adapter = new RestAdapter.Builder().setClient(new OkClient(new OkHttpClient()))
-                .setEndpoint("http://technoguff.getsandbox.com")
-                .setLogLevel(RestAdapter.LogLevel.FULL).build();
+        RestAdapter adapter = new RestAdapter.Builder()
+                .setClient(new OkClient(new OkHttpClient()))
+                .setEndpoint("https://maps.googleapis.com")
+                .setLogLevel(RestAdapter.LogLevel.FULL)
+                .build();
+
 
         return adapter.create(ApiService.class);
     }
